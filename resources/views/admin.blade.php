@@ -15,6 +15,17 @@
                         @endif
 
                         Hello Admin!!!
+
+                            <div class="button_categories">
+                                <button type="">
+                                    <a href="admin/categories">Categories</a>
+                                </button>
+                            </div>
+                            <div class="button_products">
+                                <button>
+                                    <a href="/admin/products">Products</a>
+                                </button>
+                            </div>
                     </div>
                 </div>
             </div>

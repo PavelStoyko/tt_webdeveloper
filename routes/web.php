@@ -16,10 +16,23 @@ Route::get('/', function () {
 });
 Route::get('/admin', function ()  {
    if (Auth::check()){  return view('/admin');}
-   elseif (Auth::gust())return view('auth/register');
+   elseif (Auth::guest())return view('auth/register');
    else return view('auth/login');
 });
+
+Route::resource('products', 'ProductController');
+Route::resource('categories', 'CategoryController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('admin/products', 'Admin\\ProductsController');
+Route::resource('admin/products', 'Admin\\ProductsController');
+Route::resource('admin/products', 'Admin\\ProductsController');
+Route::resource('admin/products', 'Admin\\ProductsController');
+Route::resource('admin/categories', 'Admin\\CategoriesController');
+Route::resource('admin/categories', 'Admin\\CategoriesController');
+Route::resource('admin/categories', 'Admin\\CategoriesController');
+Route::resource('admin/products', 'Admin\\ProductsController');
+Route::resource('admin/categories', 'Admin\\CategoriesController');
