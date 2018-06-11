@@ -1,4 +1,4 @@
-@include('sections.selectSection', [ 'name' => 'by_category'])
+@include('sections.selectSection', [ 'name' => 'cat_id'])
 
 <div id="portfolio" class="container">
     <div class="row">

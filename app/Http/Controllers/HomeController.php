@@ -23,10 +23,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::latest()->paginate(12);
-        $categories =  Category::all()->pluck('id','title')->put('','All categories');
-        return view('Template.index', ['products'=>$products, 'categories'=>$categories]);
+        ($sort_param = $request->get('cat_id')) ?
+            $products = Category::find($sort_param)->category()->latest()->paginate(12) :
+            $products = Product::latest()->paginate(12);
+        return view('Template.index', ['products'=>$products]);
     }
 }

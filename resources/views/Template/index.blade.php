@@ -44,6 +44,7 @@
                 <li><a href="twocolumn1.html">Left Sidebar</a></li>
                 <li><a href="twocolumn2.html">Right Sidebar</a></li>
                 <li><a href="onecolumn.html">No Sidebar</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
         </nav>
 
@@ -115,5 +116,13 @@
         Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+            $('select').change( function(e){
+                e.preventDefault();
+                location.search = 'cat_id=' + $(this).val() ;
+            });
+        });
+</script>
 </body>
 </html>

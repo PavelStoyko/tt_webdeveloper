@@ -55,18 +55,16 @@ class ProductsController extends Controller
     {
         
         $requestData = $request->all();
-        
 
         if ($request->hasFile('cover_picture')) {
-            foreach($request['cover_picture'] as $file){
-                $uploadPath = public_path('/uploads/cover_picture');
+            $file = $request->file('cover_picture');
+            $uploadPath = public_path('/images/cover_picture');
 
-                $extension = $file->getClientOriginalExtension();
-                $fileName = rand(11111, 99999) . '.' . $extension;
+            $extension = $file->getClientOriginalExtension();
+            $fileName = rand(11111, 99999) . '.' . $extension;
 
-                $file->move($uploadPath, $fileName);
-                $requestData['cover_picture'] = $fileName;
-            }
+            $file->move($uploadPath, $fileName);
+            $requestData['cover_picture'] = $fileName;
         }
 
         Product::create($requestData);
@@ -112,21 +110,19 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         $requestData = $request->all();
-        
 
         if ($request->hasFile('cover_picture')) {
-            foreach($request['cover_picture'] as $file){
-                $uploadPath = public_path('/uploads/cover_picture');
+            $file = $request->file('cover_picture');
+            $uploadPath = public_path('/images/cover_picture');
 
-                $extension = $file->getClientOriginalExtension();
-                $fileName = rand(11111, 99999) . '.' . $extension;
+            $extension = $file->getClientOriginalExtension();
+            $fileName = rand(11111, 99999) . '.' . $extension;
 
-                $file->move($uploadPath, $fileName);
-                $requestData['cover_picture'] = $fileName;
-            }
+            $file->move($uploadPath, $fileName);
+            $requestData['cover_picture'] = $fileName;
         }
+
 
         $product = Product::findOrFail($id);
         $product->update($requestData);
