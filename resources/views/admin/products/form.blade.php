@@ -13,7 +13,7 @@
 </div><div class="form-group {{ $errors->has('cover_picture') ? 'has-error' : ''}}">
     <label for="cover_picture" class="col-md-4 control-label">{{ 'Cover Picture' }}</label>
     <div class="col-md-6">
-        <input class="form-control" name="cover_picture" type="file" id="cover_picture" value="{{ $product->cover_picture or ''}}" >
+        <input class="form-control" name="cover_picture" type="file" enctype="multipart/form-data" id="cover_picture" value="{{ $product->cover_picture or ''}}" >
         {!! $errors->first('cover_picture', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('category_id') ? 'has-error' : ''}}">

@@ -62,62 +62,9 @@
 
 <!-- Main -->
 <div id="main">
-    <div class="container select_categories" style="margin-bottom: 20px;">
-        <select>
-            <option value="Prod_A">Prod A</option>
-            <option value="Prod_B">Prod B</option>
-            <option value="Prod_A">Prod C</option>
-            <option value="Prod_D">Prod D</option>
-        </select>
-    </div>
-    <div id="portfolio" class="container">
-        <div class="row">
-            <section class="3u">
-                <header>
-                    <h2>Maecenas luctus</h2>
-                </header>
-                <a href="#" class="image full"><img src="images/pics06.jpg" alt=""></a>
-                <p>Pellentesque viverra  enim.Tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                <a href="#" class="button">Read More</a>
-            </section>
-            <section class="3u">
-                <header>
-                    <h2>Donec dictum</h2>
-                </header>
-                <a href="#" class="image full"><img src="images/pics07.jpg" alt=""></a>
-                <p>Pellentesque viverra  enim.Tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                <a href="#" class="button">Read More</a>
-            </section>
-            <section class="3u">
-                <header>
-                    <h2>Etiam posuere</h2>
-                </header>
-                <a href="#" class="image full"><img src="images/pics08.jpg" alt=""></a>
-                <p>Pellentesque viverra  enim.Tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                <a href="#" class="button">Read More</a>
-            </section>
-            <section class="3u">
-                <header>
-                    <h2>Fusce ultrices</h2>
-                </header>
-                <a href="#" class="image full"><img src="images/pics09.jpg" alt=""></a>
-                <p>Pellentesque viverra  enim.Tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                <a href="#" class="button">Read More</a>
-            </section>
-        </div>
-    </div>
 
-    <div class="pagination container" style="margin-top: 20px;">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
+    {{--section--}}
+    @include('sections.mainSection')
 
     <!-- Welcome -->
     <div id="welcome" class="container">

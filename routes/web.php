@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Template/index');
-});
+Route::get('/', 'HomeController@index');
 Route::get('/admin', function ()  {
    if (Auth::check()){  return view('/admin');}
    elseif (Auth::guest())return view('auth/register');
